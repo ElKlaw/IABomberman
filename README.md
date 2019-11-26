@@ -25,29 +25,29 @@ Une fois votre bot déployé sur le cloud Norsys (https://ops.norsys.fr), il dev
 
 Envoyer une requête HTTP Post sur l'URL http://dev-arena.app.norsys.fr/api/challenge/register
 
-  POST http://dev-arena.app.norsys.fr/api/challenge/register
-  Content-Type: application/json
-  {
-    name : <--*obligatoire* Un nom Unique pour votre bot-->,
-    endpoint : <--*obligatoire* L'url à appeler pour questionner votre bot : uniquement *-dev-arena.app.norsys.fr-->,
-    sonarProjectKey : <--La clef projet de votre bot sous sonar (facultatif)-->,
-    sonarToken : <--Un token d'accès à votre projet généré par Sonar (facultatif)-->,
-    promotionName : <--*obligatoire*le libelle de votre promotion sous le format : mois-annee (exemple : juillet-2018)-->,
-    avatar : <--*obligatoire* Votre avatar en Base64-->
-  }
+    POST http://dev-arena.app.norsys.fr/api/challenge/register
+    Content-Type: application/json
+    {
+      name : <--*obligatoire* Un nom Unique pour votre bot-->,
+      endpoint : <--*obligatoire* L'url à appeler pour questionner votre bot : uniquement *-dev-arena.app.norsys.fr-->,
+      sonarProjectKey : <--La clef projet de votre bot sous sonar (facultatif)-->,
+      sonarToken : <--Un token d'accès à votre projet généré par Sonar (facultatif)-->,
+      promotionName : <--*obligatoire*le libelle de votre promotion sous le format : mois-annee (exemple : juillet-2018)-->,
+      avatar : <--*obligatoire* Votre avatar en Base64-->
+    }
                 
 Exemple :
 
-  POST http://dev-arena.app.norsys.fr/api/challenge/register
-  Content-Type: application/json
-  {
-    name : "DummyBot",
-    endpoint : "http://dummy-devArena.app.norsys.fr/api/combat/exec",
-    sonarProjectKey : "fr.norsys.pirat.fboissier:dev-arena-bot",
-    sonarToken : "61cc0105c6f365aee075f710b28e49a85c988908",
-    promotionName : "juillet-2018",
-    avatar : "iVBORw0KGgoAAAANSUh ......"
-  }
+    POST http://dev-arena.app.norsys.fr/api/challenge/register
+    Content-Type: application/json
+    {
+      name : "DummyBot",
+      endpoint : "http://dummy-devArena.app.norsys.fr/api/combat/exec",
+      sonarProjectKey : "fr.norsys.pirat.fboissier:dev-arena-bot",
+      sonarToken : "61cc0105c6f365aee075f710b28e49a85c988908",
+      promotionName : "juillet-2018",
+      avatar : "iVBORw0KGgoAAAANSUh ......"
+    }
                 
 Réponse :
 Code HTTP 200 + trame JSON correspondant au compétiteur enregistré.
@@ -65,9 +65,9 @@ Le contexte de la partie contient : Trame d'exemple
 
 Le format de réponse attendue est ( Content-Type: application/json ) :
 
-  {
-    "message" : "MOVE right"
-  }
+    {
+      "message" : "MOVE right"
+    }
                 
 Niveau 1
 -----------------
